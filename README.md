@@ -1,6 +1,6 @@
 # README
 
-docker compose up
+docker compose up --build
 docker compose run web rake db:create
 
 In a separate terminal while the application is running:
