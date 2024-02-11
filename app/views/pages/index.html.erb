@@ -1,1 +1,8 @@
 <h1>ChatGPT</h1>
+
+<%= form_with do |form| %>
+    <div class="chat-input">
+        <%= form.text_field :message %><br>
+        <%= form.submit "Send" %><br>
+    </div>
+<% end %>
