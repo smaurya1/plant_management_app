@@ -1,0 +1,134 @@
+{
+  "hardware": {
+    "storage": [
+      {
+        "brand": "WD",
+        "name": "BLACK SN850X 1TB Internal SSD PCIe Gen 4 x4 NVMe",
+        "price": 99.99,
+        "specs": {
+          "storage_capacity": 1000,
+          "drive_type": "SSD",
+          "read_speed": 7300,
+          "write_speed": 6350,
+          "form_factor": "M.2 2280",
+          "interface": "PCIe Gen 4 x4"
+        }
+      },
+      {
+        "brand": "Samsung",
+        "name": "990 PRO 4TB Internal SSD PCle Gen 4x4 NVMe",
+        "price": 369.99,
+        "specs": {
+          "storage_capacity": 4000,
+          "drive_type": "SSD",
+          "read_speed": 7450,
+          "write_speed": 6900,
+          "form_factor": "M.2 2280",
+          "interface": "PCIe Gen 4 x4"
+        }
+      },
+      {
+        "brand": "Seagate",
+        "name": "Barracuda 2TB Internal SATA Hard Drive for Desktops",
+        "price": 64.99,
+        "specs": {
+          "storage_capacity": 2000,
+          "drive_type": "HDD",
+          "rotational_speed": 7200,
+          "form_factor": "3.5 in.",
+          "interface": "SATA"
+        }
+      },
+      {
+        "brand": "WD",
+        "name": "Blue SA510 1TB Internal SSD SATA",
+        "price": 79.99,
+        "specs": {
+          "storage_capacity": 1000,
+          "drive_type": "SSD",
+          "read_speed": 560,
+          "write_speed": 520,
+          "form_factor": "2.5 in.",
+          "interface": "SATA"
+        }
+      },
+      {
+        "brand": "Seagate",
+        "name": "Starfield Special Edition Game Drive for Xbox 5TB External USB 3.2 Gen 1 Portable Hard Drive",
+        "price": 124.99,
+        "specs": {
+          "storage_capacity": 5000,
+          "drive_type": "HDD",
+          "interface": "USB Type A (USB 3.2 Gen1)"
+        }
+      },
+      {
+        "brand": "WD",
+        "name": "Red Plus 8TB Internal SATA NAS Hard Drive for Desktops",
+        "price": 169.99,
+        "specs": {
+          "storage_capacity": 8000,
+          "drive_type": "HDD",
+          "rotational_speed": 5640,
+          "read_speed": 185,
+          "write_speed": 185,
+          "form_factor": "3.5 in.",
+          "interface": "SATA"
+        }
+      },
+      {
+        "brand": "Crucial",
+        "name": "T700 4TB Internal SSD PCIe Gen 5x4 NVMe",
+        "price": 499.99,
+        "specs": {
+          "storage_capacity": 4000,
+          "drive_type": "SSD",
+          "read_speed": 12400,
+          "write_speed": 11800,
+          "form_factor": "M.2 2280",
+          "interface": "PCIe Gen 5 x4"
+        }
+      },
+      {
+        "brand": "WD",
+        "name": "easystore 480GB Internal SSD SATA",
+        "price": 44.99,
+        "specs": {
+          "storage_capacity": 480,
+          "drive_type": "SSD",
+          "form_factor": "2.5 in.",
+          "interface": "SATA"
+        }
+      },
+      {
+        "brand": "Crucial",
+        "name": "T700 4TB Internal SSD PCIe Gen 5x4 NVMe with Heatsink",
+        "price": 529.99,
+        "specs": {
+          "storage_capacity": 4000,
+          "drive_type": "SSD",
+          "read_speed": 12400,
+          "write_speed": 11800,
+          "form_factor": "M.2 2280",
+          "interface": "PCIe Gen 5 x4",
+          "heatsink": true
+        }
+      },
+      {
+        "brand": "WD",
+        "name": "Black 1TB Internal SATA Hard Drive (OEM/Bare Drive) for Desktops",
+        "price": 56.99,
+        "specs": {
+          "storage_capacity": 1000,
+          "drive_type": "HDD",
+          "rotational_speed": 7200,
+          "read_speed": 150,
+          "write_speed": 150,
+          "form_factor": "3.5 in.",
+          "interface": "SATA",
+          "bare_drive": true
+        }
+      }
+    ]
+  }
+}

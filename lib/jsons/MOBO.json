@@ -1,0 +1,53 @@
+{
+  "hardware": {
+    "motherboard": [
+      {
+        "brand": "GIGABYTE",
+        "name": "Z790 AORUS ELITE X WIFI7 (Socket LGA 1700) USB 3.2 Type-C Intel Motherboard",
+        "price": 259.99,
+        "year": 2023,
+        "chipset_compatibility": "Intel",
+        "form_factor": "ATX",
+        "processor_socket": "Socket LGA 1700",
+        "processor_compatibility": ["Intel 13th Generation Core i7", "Intel 13th Generation Core i9", "Intel 12th Generation Core i9", "Intel 12th Generation Core i7"],
+        "os_compatibility": ["Windows 11 Home", "Mac OS"],
+        "number_of_memory_slots": 4,
+        "maximum_memory_supported": "192GB",
+        "memory_type_supported": "DDR5",
+        "memory_format_supported": "DIMM",
+        "memory_speeds_supported": "4 x DDR5 DIMM sockets supporting up to 192 GB (48 GB single DIMM capacity)"
+      },
+      {
+        "brand": "ASUS",
+        "name": "ROG STRIX X670E-I GAMING WIFI (Socket AM5) USB 3.2 AMD Motherboard",
+        "price": 439.99,
+        "year": 2022,
+        "chipset_compatibility": "AMD",
+        "form_factor": "ATX",
+        "processor_socket": "Socket AM5",
+        "processor_compatibility": ["AMD Ryzen 9 7000 Series", "AMD Ryzen 7 7000 Series", "AMD Ryzen 5 7000 Series", "Intel Celeron"],
+        "os_compatibility": ["Windows 10", "Windows 11 Home"],
+        "number_of_memory_slots": 2,
+        "maximum_memory_supported": "64GB",
+        "memory_type_supported": "DDR5",
+        "memory_format_supported": "DIMM",
+        "memory_speeds_supported": "6400+(OC)/6200(OC)/6000(OC)/5800(OC)/5600(OC)/5400(OC)/5200/5000/4800"
+      },
+      {
+        "brand": "Asus",
+        "name": "ASUS X99-A motherboard Intel® X99 LGA 2011-v3 ATX",
+        "year": 2015,
+        "chipset_compatibility": "Intel",
+        "form_factor": "ATX",
+        "processor_socket": "LGA 2011-v3",
+        "processor_compatibility": "Intel Core i7",
+        "os_compatibility": ["Windows 10"],
+        "number_of_memory_slots": 8,
+        "maximum_memory_supported": "64GB",
+        "memory_type_supported": "DDR4-SDRAM",
+        "memory_format_supported": "DIMM",
+        "memory_speeds_supported": "2133, 2400, 2666, 2800, 3000, 3200 MHz"
+      }
+    ]
+  }
+}

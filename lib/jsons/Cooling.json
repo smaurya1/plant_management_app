@@ -1,0 +1,25 @@
+{
+  "hardware": {
+    "cooling_system": [
+      {
+        "brand": "NZXT",
+        "name": "Kraken X53 240mm Radiator RGB All-in-one CPU Liquid Cooling System",
+        "price": 164.99,
+        "cooling_type": "Liquid",
+        "fan_speed": "1500 RPM",
+        "fan_connector": "4 pin PWM",
+        "processor_socket": ["Socket LGA 1700", "Socket LGA 1200", "Socket H2 (LGA 1155)", "Socket AM4 (PGA 1331)", "Socket sTRX4/Socket SP3r3 (LGA 4094)"],
+        "radiator_size": "240mm"
+      },
+      {
+        "brand": "Cooler Master",
+        "name": "Hyper 212 RGB Black Edition 120mm CPU Cooling Fan",
+        "price": 54.99,
+        "cooling_type": "Air",
+        "fan_speed": "2000 RPM",
+        "fan_connector": "4-pin (PWM)",
+        "processor_socket": ["Socket LGA 1700", "Socket LGA 1200", "Socket R4 (LGA 2066)", "Socket LGA 2011-v3", "Socket R (LGA 2011)", "Socket LS (LGA 1567)", "Socket H4 (LGA 1151)", "Socket H3 (LGA 1150)", "Socket B (LGA 1366)", "Socket AM4 (PGA 1331)", "Socket AM3+ (PGA 942)", "Socket AM3 (PGA 940/941)", "Socket AM2+ (PGA 940)", "Socket AM2 (PGA 940)", "Socket FM2+ (PGA 906)", "Socket FM2 (PGA 904)", "Socket FM1 (PGA 905)"]
+      }
+    ]
+  }
+}

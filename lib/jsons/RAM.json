@@ -1,0 +1,134 @@
+{
+  "hardware": {
+    "ram": [
+      {
+        "brand": "CORSAIR",
+        "name": "VENGEANCE RGB PRO SL 32GB (2PK x 16GB) 3600MHz DDR4 C18 DIMM Desktop Memory - White",
+        "price": 99.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Desktop",
+          "speed": 3600,
+          "latency": "18-22-22-42",
+          "cas_latency": 18,
+          "lighting_type": "RGB",
+          "memory_capacity_per_module": 16,
+          "memory_capacity_total": 32,
+          "voltage": 1.35
+        }
+      },
+      {
+        "brand": "PNY",
+        "name": "XLR8 Gaming 16GB (2x8GB) 3200MHz DDR4 DRAM (PC4-25600) CL16 1.35V Dual Channel Desktop (DIMM) Memory Kit - Red",
+        "price": 39.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Desktop",
+          "speed": 3200,
+          "latency": 16,
+          "cas_latency": 16,
+          "lighting_type": "None",
+          "memory_capacity_per_module": 8,
+          "memory_capacity_total": 16,
+          "voltage": 1.35
+        }
+      },
+      {
+        "brand": "CORSAIR",
+        "name": "VENGEANCE RGB PRO SL 32GB (2PK x 16GB) 3600MHz DDR4 C18 DIMM Desktop Memory - Black",
+        "price": 82.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Desktop",
+          "speed": 3600,
+          "latency": "18-22-22-42",
+          "cas_latency": 18,
+          "lighting_type": "RGB",
+          "memory_capacity_per_module": 16,
+          "memory_capacity_total": 32,
+          "voltage": 1.35
+        }
+      },
+      {
+        "brand": "Crucial",
+        "name": "Pro 64GB Kit (2x32GB) 3200 MHz DDR4-3200 UDIMM Desktop Memory - Black",
+        "price": 119.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Desktop",
+          "speed": 3200,
+          "latency": 22,
+          "cas_latency": 22,
+          "lighting_type": "None",
+          "memory_capacity_per_module": 32,
+          "memory_capacity_total": 64,
+          "voltage": 1.2
+        }
+      },
+      {
+        "brand": "Crucial",
+        "name": "64GB (2PK 32GB) 3200MHz speed PC4-25600 DDR4 SODIMM Laptop Memory Kit - Green",
+        "price": 145.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Laptop",
+          "speed": 3200,
+          "latency": 22,
+          "cas_latency": 22,
+          "lighting_type": "None",
+          "memory_capacity_per_module": 32,
+          "memory_capacity_total": 64,
+          "voltage": 1.2
+        }
+      },
+      {
+        "brand": "Crucial",
+        "name": "Pro 32GB Kit (2x16GB) 1600 MHz DDR4-3200 UDIMM Desktop Memory - Black",
+        "price": 64.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Desktop",
+          "speed": 3200,
+          "latency": 22,
+          "cas_latency": 22,
+          "lighting_type": "None",
+          "memory_capacity_per_module": 16,
+          "memory_capacity_total": 32,
+          "voltage": 1.2
+        }
+      },
+      {
+        "brand": "CORSAIR",
+        "name": "VENGEANCE Performance 32GB (1PK 32GB) 3200MHz DDR4 C22 SODIMM Laptop Memory - Black",
+        "price": 69.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Laptop",
+          "speed": 3200,
+          "latency": "22-22-22-53",
+          "cas_latency": 22,
+          "lighting_type": "None",
+          "memory_capacity_per_module": 32,
+          "memory_capacity_total": 32,
+          "voltage": 1.2
+        }
+      },
+      {
+        "brand": "CORSAIR",
+        "name": "VENGEANCE RGB PRO SL 16GB (2PK x 8GB) 3200MHz DDR4 C16 DIMM Desktop Memory - White",
+        "price": 54.99,
+        "specs": {
+          "type": "DDR4",
+          "form_factor": "Desktop",
+          "speed": 3200,
+          "latency": "16-20-20-38",
+          "cas_latency": 16,
+          "lighting_type": "RGB",
+          "memory_capacity_per_module": 8,
+          "memory_capacity_total": 16,
+          "voltage": 1.35
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "hardware": {
+    "gpu": [
+      {
+        "brand": "ASUS",
+        "model": "NVIDIA GeForce RTX 4070",
+        "price": 559.99,
+        "os_compatibility": ["Windows"],
+        "year": 2023,
+        "specs": {
+          "memory_size": "12GB",
+          "memory_speed": "GDDR6X",
+          "boost_clock": "2.55 GHz",
+          "base_clock": "2.52 GHz",
+          "rendering": ["DLSS3", "Ray tracing"],
+          "max_resolution": "8k"
+        }
+      },
+      {
+        "brand": "XFX",
+        "model": "AMD Radeon RX 7700 XT",
+        "price": 449.99,
+        "os_compatibility": ["Windows", "Linux"],
+        "year": 2023,
+        "specs": {
+          "memory_size": "12GB",
+          "memory_speed": "GDDR6",
+          "boost_clock": "2.59 GHz",
+          "base_clock": "1.78 GHz",
+          "rendering": ["Ray tracing"],
+          "max_resolution": "4k"
+        }
+      },
+      {
+        "brand": "Gigabyte",
+        "model": "NVIDIA GeForce RTX 3060",
+        "price": 289.99,
+        "os_compatibility": ["Windows", "Mac"],
+        "year": 2021,
+        "specs": {
+          "memory_size": "12GB",
+          "memory_speed": "GDDR6",
+          "boost_clock": "1.84 GHz",
+          "base_clock": "1.32 GHz",
+          "rendering": ["DLSS", "Ray tracing"],
+          "max_resolution": "8K"
+        }
+      },
+      {
+        "brand": "XFX",
+        "model": "AMD Radeon RX 6800",
+        "price": 429.99,
+        "os_compatibility": ["Windows", "Linux"],
+        "year": 2020,
+        "specs": {
+          "memory_size": "16GB",
+          "memory_speed": "GDDR6",
+          "boost_clock": "2.19 GHz",
+          "base_clock": "1.85 GHz",
+          "rendering": ["Ray tracing"],
+          "max_resolution": "4K"
+        }
+      },
+      {
+        "brand": "N/A",
+        "model": "NVIDIA GeForce GTX 1650",
+        "price": "N/A",
+        "os_compatibility": ["Windows", "Linux"],
+        "year": 2019,
+        "specs": {
+          "memory_size": "4GB",
+          "memory_speed": "GDDR5",
+          "boost_clock": "1665 MHz",
+          "base_clock": "1485 MHz",
+          "rendering": ["None"],
+          "max_resolution": "8k"
+        }
+      },
+      {
+        "brand": "N/A",
+        "model": "NVIDIA GeForce GTX 950",
+        "price": "N/A",
+        "os_compatibility": ["Windows"],
+        "year": 2015,
+        "specs": {
+          "memory_size": "2GB",
+          "memory_speed": "GDDR5",
+          "boost_clock": "1188 MHz",
+          "base_clock": "1024 MHz",
+          "rendering": ["None"],
+          "max_resolution": "N/A"
+        }
+      }
+    ]
+  }
+}

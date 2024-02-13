@@ -1,0 +1,142 @@
+{
+  "hardware": {
+    "cpu": [
+      {
+        "name": "Intel Core i9-14900K 14th Gen 24-Core 32-Thread",
+        "brand": "Intel",
+        "model": "Core i9-14900K",
+        "generation": 14,
+        "socket": "LGA 1700",
+        "baseClock": "4.4 GHz",
+        "boostClock": "6.0 GHz",
+        "cores": 24,
+        "threads": 32,
+        "unlocked": true,
+        "price": 548.99
+      },
+      {
+        "name": "AMD Ryzen 7 5800X3D 3.4 GHz Eight-Core AM4 Processor",
+        "brand": "AMD",
+        "model": "Ryzen 7 5800X3D",
+        "socket": "AM4 (PGA 1331)",
+        "baseClock": "3.4 GHz",
+        "boostClock": "4.5 GHz",
+        "cores": 8,
+        "threads": 16,
+        "unlocked": false,
+        "price": 259.00
+      },
+      {
+        "name": "AMD Ryzen 7 7800X3D 8-Core - 16-Thread 4.2 GHz (5.0 GHz Max Boost) AM5 Processor",
+        "brand": "AMD",
+        "model": "Ryzen 7 7800X3D",
+        "socket": "AM5 (LGA 1718)",
+        "baseClock": "4.2 GHz",
+        "boostClock": "5.0 GHz",
+        "cores": 8,
+        "threads": 16,
+        "unlocked": true,
+        "price": 399.00
+      },
+      {
+        "name": "Intel Core i7-12700K Desktop Processor 12 (8P+4E) Cores up to 5.0 GHz",
+        "brand": "Intel",
+        "model": "Core i7-12700K",
+        "socket": "LGA 1700",
+        "baseClock": "2.7 GHz",
+        "boostClock": "5.0 GHz",
+        "cores": 12,
+        "threads": 20,
+        "unlocked": true,
+        "price": 419.99
+      },
+      {
+        "name": "AMD Ryzen 9 7950X 16-core - 32-Thread 4.5GHz (5.7 GHz Max Boost) AM5 Desktop Processor",
+        "brand": "AMD",
+        "model": "Ryzen 9 7950X",
+        "socket": "AM5 (LGA 1718)",
+        "baseClock": "4.5 GHz",
+        "boostClock": "5.7 GHz",
+        "cores": 16,
+        "threads": 32,
+        "unlocked": true,
+        "price": 549.99
+      },
+      {
+        "name": "Intel Core i7-13700F 13th Gen 16 cores 8 P-cores + 8 E-cores 30MB Cache, 2.1 to 5.2 GHz Desktop Processor",
+        "brand": "Intel",
+        "model": "Core i7-13700F",
+        "generation": 13,
+        "socket": "LGA 1700",
+        "baseClock": "2.1 GHz",
+        "boostClock": "5.2 GHz",
+        "cores": 16,
+        "threads": 24,
+        "unlocked": false,
+        "price": 289.99
+      },
+      {
+        "name": "AMD Ryzen 7 5700X3D 8-core - 16-thread – 3 GHz (4.1 GHz Max Boost) Socket AM4 Unlocked Desktop Processor",
+        "brand": "AMD",
+        "model": "Ryzen 7 5700X3D",
+        "socket": "AM4 (PGA 1331)",
+        "baseClock": "3 GHz",
+        "boostClock": "4.1 GHz",
+        "cores": 8,
+        "threads": 16,
+        "unlocked": true,
+        "price": 249.00
+      },
+      {
+        "name": "Intel Core i9-13900K 13th Gen 24 cores 8 P-cores + 16 E-cores 36M Cache, 3 to 5.8 GHz LGA1700 Unlocked Desktop Processor",
+        "brand": "Intel",
+        "model": "Core i9-13900K",
+        "generation": 13,
+        "socket": "LGA 1700",
+        "baseClock": "3 GHz",
+        "boostClock": "5.7 GHz",
+        "cores": 24,
+        "threads": 32,
+        "unlocked": true,
+        "price": 529.99
+      },
+      {
+        "name": "AMD Ryzen 9 5900X 4th Gen 12-core, 24-threads Unlocked Desktop Processor Without Cooler",
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "socket": "AM4 (PGA 1331)",
+        "baseClock": "3.7 GHz",
+        "boostClock": "4.8 GHz",
+        "cores": 12,
+        "threads": 24,
+        "unlocked": true,
+        "price": 299.00
+      },
+      {
+        "name": "AMD Ryzen 7 7700X 8-core - 16-Thread 4.5GHz (5.4 GHz Max Boost) Socket AM5 Desktop Processor",
+        "brand": "AMD",
+        "model": "Ryzen 7 7700X",
+        "socket": "AM5 (LGA 1718)",
+        "baseClock": "4.5 GHz",
+        "boostClock": "5.4 GHz",
+        "cores": 8,
+        "threads": 16,
+        "unlocked": true,
+        "price": 349.99
+      },
+      {
+        "brand": "Intel",
+        "model": "Core i5-2400S",
+        "core_type": "Quad-Core",
+        "base_clock": "2.5 GHz",
+        "turbo_clock": "3.3 GHz",
+        "cache": "6 MB",
+        "socket": "LGA 1155",
+        "memory_support": "Dual-Channel DDR3-1066/1333",
+        "graphics": "Intel HD Graphics 2000",
+        "tdp": "65 W",
+        "price": 70.00
+      }
+    ]
+  }
+}
