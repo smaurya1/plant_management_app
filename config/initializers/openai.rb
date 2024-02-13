@@ -1,5 +1,3 @@
 OpenAI.configure do |config|
-    config.access_token = "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"
-    
-    # Add any other configurations here
-  end
+  config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
+end

@@ -1,0 +1,14 @@
+<% if @generated_response.present? %>
+  <p>Prompt:</p>
+  <p><%= @prompt %></p>
+<% end %>
+
+<% if @generated_response.present? %>
+  <p>Generated Response:</p>
+  <p><%= @generated_response %></p>
+<% end %>
+
+<%= form_with(url: chatgpt_index_path, method: :get) do %>
+  <%= text_field_tag :prompt %>
+  <%= submit_tag "Generate Response" %>
+<% end %>
