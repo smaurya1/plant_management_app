@@ -20,8 +20,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_032800) do
   end
 
   create_table "requests", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "request", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "responses", force: :cascade do |t|
@@ -44,5 +47,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_032800) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "requests", "users"
   add_foreign_key "responses", "requests", column: "requests_id"
 end
