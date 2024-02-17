@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'login', to: 'pages#login'
   get 'dashboard', to: 'pages#dashboard'
   get 'addplant', to: 'pages#addplant'
+  get 'users', to: 'pages#application'
 
   devise_for :users
 
