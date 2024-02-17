@@ -5,7 +5,6 @@ class Plant < ActiveRecord::Migration[7.1]
       t.string      :name, null: false
       t.string      :species, null: false
       t.string      :personality, null: false
-      t.timestamps
     end
   end
 end

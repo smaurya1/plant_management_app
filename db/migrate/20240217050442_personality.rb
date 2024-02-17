@@ -3,7 +3,6 @@ class Personality < ActiveRecord::Migration[7.1]
     create_table :personalities do |t|
       t.references  :plant, foreign_key: true
       t.string      :type, null: false
-      t.timestamps
     end
   end
 end
