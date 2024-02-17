@@ -8,3 +8,4 @@ MAC Only: source ~/.zshrc (update paths to ruby version)
 
 docker compose exec web bash
 rake db:migrate
+rake db:seed

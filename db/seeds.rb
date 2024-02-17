@@ -8,6 +8,14 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-["Happy", "Sad", "Angry", "Nerdy", "Codependent"].each do |t|
-    Personalities.find_or_create_by_name(t)
-end
+Personality.destroy_all
+
+Personality.create!([
+    { personality_type: "Happy" },
+    { personality_type: "Sad" },
+    { personality_type: "Angry" },
+    { personality_type: "Nerdy" },
+    { personality_type: "Codependent" }
+])
+
+puts "Created Personalities"
