@@ -1,0 +1,12 @@
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body>
+  <% if user_signed_in? %>
+    <h1>Welcome, <%= current_user.email %></h1>
+  <% end %>
+  <td>
+    <%= link_to 'Add Plant', addplant_path, class: 'addplant_button' %>
+  </td>
+</body>

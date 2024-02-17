@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   
-  root "pages#index"
+  root 'pages#welcome'
+  get 'welcome', to: 'pages#welcome'
+  get 'login', to: 'pages#login'
+  get 'dashboard', to: 'pages#dashboard'
+  get 'addplant', to: 'pages#addplant'
 
   devise_for :users
 
