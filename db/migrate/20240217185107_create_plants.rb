@@ -1,4 +1,4 @@
-class Plant < ActiveRecord::Migration[7.1]
+class CreatePlants < ActiveRecord::Migration[7.1]
   def change
     create_table :plants do |t|
       t.references  :user, foreign_key: true
