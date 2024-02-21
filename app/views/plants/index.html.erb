@@ -22,8 +22,8 @@
         <td><%= plant.personality.personality_type%></td>
         <td><%= link_to 'Show', plant %></td>
         <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= button_to 'Delete', plant_path(plant), method: :delete, data: { confirm: 'Are you sure?' } %></td>      
+  </tr>
     <% end %>
   </tbody>
 </table>

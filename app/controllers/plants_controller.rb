@@ -15,7 +15,7 @@ class PlantsController < ApplicationController
   def create
     @plant = Plant.new(plant_params)
     if @plant.save
-      redirect_to dashboard_path, notice: 'Plant was successfully added.'
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -26,15 +26,16 @@ class PlantsController < ApplicationController
 
   def update
     if @plant.update(plant_params)
-      redirect_to dashboard_path, notice: 'Plant was successfully updated.'
+      redirect_to dashboard_path
     else
       render :edit
     end
   end
 
   def destroy
+    @plant = Plant.find(params[:id])
     @plant.destroy
-    redirect_to dashboard_path, notice: 'Plant was successfully destroyed.'
+    redirect_to dashboard_path
   end
 
   private
