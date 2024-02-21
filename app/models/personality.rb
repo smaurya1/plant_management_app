@@ -1,3 +1,4 @@
 class Personality < ApplicationRecord
-    has_one :plant
+    has_many :plant
+    has_many :prompt
 end

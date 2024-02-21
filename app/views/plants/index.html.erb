@@ -1,0 +1,29 @@
+<%= render 'shared/topnav' %>
+
+<h1>Your Plants</h1>
+
+<table border = '1'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Species</th>
+      <th>Watering Time</th>
+      <th>Personality</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plants.each do |plant| %>
+      <tr>
+        <td><%= plant.name %></td>
+        <td><%= plant.species %></td>
+        <td><%= plant.wateringTime %></td>
+        <td><%= plant.personality.personality_type%></td>
+        <td><%= link_to 'Show', plant %></td>
+        <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
+        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

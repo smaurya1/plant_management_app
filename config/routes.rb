@@ -11,10 +11,12 @@ Rails.application.routes.draw do
   root 'pages#welcome'
   get 'welcome', to: 'pages#welcome'
   get 'login', to: 'pages#login'
-  get 'dashboard', to: 'pages#dashboard'
   get 'addplant', to: 'pages#addplant'
   get 'users', to: 'pages#application'
+  get '/dashboard', to: 'plants#index', as: 'dashboard'
 
   devise_for :users
+
+  resources :plants
 
 end

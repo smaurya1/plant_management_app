@@ -1,0 +1,38 @@
+<%= render 'shared/topnav' %>
+
+<body>
+
+    <h1>New Plant</h1>
+    
+    <%= form_for @plant, url: plants_path do |form| %>
+      <p>
+        <%= form.label :user_id %><br>
+        <%= form.collection_select :user_id, User.all, :id, :email %>
+      </p>
+
+      <p>
+        <%= form.label :personality_id %><br>
+        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type %>
+      </p>
+    
+      <p>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+      </p>
+
+      <p>
+        <%= form.label :species %><br>
+        <%= form.text_field :species %>
+      </p>
+
+      <p>
+        <%= form.label :wateringTime %><br>
+        <%= form.text_field :wateringTime %>
+      </p>
+    
+      <p>
+        <%= form.submit %>
+      </p>
+    <% end %>
+
+</body>
