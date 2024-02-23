@@ -2,24 +2,17 @@
 
 <h1>Your Plants</h1>
 
-<table border = '1'>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Species</th>
-      <th>Watering Time</th>
-      <th>Personality</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @plants.each do |plant| %>
-      <tr>
-        <td><%= link_to plant.name, plant%></td>
-        <td><%= plant.species %></td>
-        <td><%= plant.wateringTime %></td>
-        <td><%= plant.personality.personality_type%></td>     
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="plant-cards">
+  <% @plants.each do |plant| %>
+    <div class="card">
+      <%= link_to edit_plant_path(plant) do %>
+        <%= image_tag('plant_placeholder.webp') %>
+      <% end %>
+      <h2><%= plant.name %></h2>
+      <hr>
+      <p><strong>Species:</strong> <%= plant.species %></p>
+      <p><strong>Watering Time:</strong> <%= plant.wateringTime %></p>
+      <p><strong>Personality:</strong> <%= plant.personality.personality_type %></p>
+    </div>
+  <% end %>
+</div>

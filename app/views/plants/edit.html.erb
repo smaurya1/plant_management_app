@@ -1,38 +1,47 @@
+
 <%= render 'shared/topnav' %>
 
 <body>
+<div class="center-container">
 
-    <h1>Edit Plant</h1>
+<h1>Edit Plant</h1>
+
+<%= button_to 'Delete Plant', plant_path(@plant), method: :delete%>
     
-    <%= form_for @plant, url: plant_path(@plant), method: :patch do |form| %>
+<%= form_for @plant, url: plant_path(@plant), method: :patch do |form| %>
+  
       <p>
         <%= form.label :user_id %><br>
-        <%= form.collection_select :user_id, User.all, :id, :email %>
+        <%= form.collection_select :user_id, User.all, :id, :email, {}, {class: "selection"} %>
       </p>
 
       <p>
         <%= form.label :personality_id %><br>
-        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type %>
+        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type, {}, {class: "selection"} %>
       </p>
+
     
-      <p>
-        <%= form.label :name %><br>
-        <%= form.text_field :name %>
-      </p>
+      <div class="field">
+        <%= form.label :name, class: 'input-lable' %>
+        <%= form.text_field :name, class: 'first-field' %>
+      </div>
 
-      <p>
-        <%= form.label :species %><br>
-        <%= form.text_field :species %>
-      </p>
+      <div class="field">
+        <%= form.label :species, class: 'input-lable' %>
+        <%= form.text_field :species, class: 'middle-field' %>
+      </div>
 
-      <p>
-        <%= form.label :wateringTime %><br>
-        <%= form.text_field :wateringTime %>
-      </p>
+      <div class="field">
+        <%= form.label :wateringTime, class: 'input-lable' %>
+        <%= form.text_field :wateringTime, class: 'last-field' %>
+      </div>
     
       <p>
         <%= form.submit %>
       </p>
+      
     <% end %>
+    
+</div>
 
 </body>

@@ -178,3 +178,48 @@ h2 {
   font-size: 12pt;
   cursor: pointer;
 }
+
+.plant-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  height: 450px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.selection {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.selection:focus {
+  outline: none;
+}
+
+.selection {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 4 5"><path fill="%23007aff" d="M2 0L0 2h4L2 0zm0 5L0 3h4l-2 2z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
