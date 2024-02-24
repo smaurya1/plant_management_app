@@ -4,13 +4,25 @@
 }
 
 .topnav .nav-link {
-  display: inline-block;
+  float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 15px;
-  vertical-align: middle;
+}
+
+.topnav .logout-link {
+  float: right;
+  font-size: 12pt;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .center-container {
