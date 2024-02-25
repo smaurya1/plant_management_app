@@ -5,13 +5,13 @@
 <div class="plant-cards">
   <% @plants.each do |plant| %>
     <div class="card">
-      <%= link_to edit_plant_path(plant) do %>
+      <%= link_to plant_path(plant) do %>
         <%= image_tag('plant_placeholder.webp') %>
       <% end %>
       <h2><%= plant.name %></h2>
       <hr>
       <p><strong>Species:</strong> <%= plant.species %></p>
-      <p><strong>Watering Time:</strong> <%= plant.wateringTime %></p>
+      <p><strong>Watering Time:</strong> <%= plant.wateringTime.strftime('%H:%M') %></p>
       <p><strong>Personality:</strong> <%= plant.personality.personality_type %></p>
     </div>
   <% end %>

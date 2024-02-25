@@ -5,7 +5,7 @@ class CreatePlants < ActiveRecord::Migration[7.1]
       t.references  :personality, foreign_key: true
       t.string      :name, null: false
       t.string      :species, null: false
-      t.string      :wateringTime, null: false
+      t.time        :wateringTime, null: false
     end
   end
 end

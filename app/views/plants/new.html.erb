@@ -28,8 +28,8 @@
       </div>
 
       <div class="field">
-        <%= form.label :wateringTime, class: 'input-lable' %>
-        <%= form.text_field :wateringTime, class: 'last-field' %>
+        <%= form.label :wateringTime, class: 'input-lable' %><br>
+        <%= form.time_select :wateringTime, :discard_hour => false, :default => {:hour => '00', :minute => '00'}, :include_seconds => false %>
       </div>
     
       <p>

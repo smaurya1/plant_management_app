@@ -1,0 +1,26 @@
+<%= render 'shared/topnav' %>
+
+<h1><%= @plant.name %></h1>
+
+<table>
+  <tr>
+    <td><strong>Name:</strong></td>
+    <td><%= @plant.name %></td>
+  </tr>
+  <tr>
+    <td><strong>Species:</strong></td>
+    <td><%= @plant.species %></td>
+  </tr>
+  <tr>
+    <td><strong>Watering Time:</strong></td>
+    <td><%= @plant.wateringTime %></td>
+  </tr>
+  <tr>
+    <td><strong>ChatGPT generated details here:</strong></td>
+  </tr>
+</table>
+
+<br>
+
+<td><%= link_to 'Edit', edit_plant_path(@plant) %></td><br><br>
+<td><%= button_to 'Delete', plant_path(@plant), method: :delete %></td>
