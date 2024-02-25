@@ -6,6 +6,7 @@ class CreatePlants < ActiveRecord::Migration[7.1]
       t.string      :name, null: false
       t.string      :species, null: false
       t.time        :wateringTime, null: false
+      t.string      :location, null: false
     end
   end
 end

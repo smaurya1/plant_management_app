@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_18_045508) do
     t.string "name", null: false
     t.string "species", null: false
     t.time "wateringTime", null: false
+    t.string "location", null: false
     t.index ["personality_id"], name: "index_plants_on_personality_id"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end

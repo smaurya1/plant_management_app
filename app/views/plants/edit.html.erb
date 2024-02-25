@@ -14,12 +14,6 @@
         <%= form.label :user_id %><br>
         <%= form.collection_select :user_id, User.all, :id, :email, {}, {class: "selection"} %>
       </p>
-
-      <p>
-        <%= form.label :personality_id %><br>
-        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type, {}, {class: "selection"} %>
-      </p>
-
     
       <div class="field">
         <%= form.label :name, class: 'input-lable' %>
@@ -32,9 +26,19 @@
       </div>
 
       <div class="field">
+        <%= form.label :location, class: 'input-lable' %>
+        <%= form.text_field :location, class: 'middle-field' %>
+      </div>
+
+      <div class="field">
         <%= form.label :wateringTime, class: 'input-lable' %><br>
         <%= form.time_select :wateringTime, :discard_hour => false, :default => {:hour => '00', :minute => '00'}, :include_seconds => false %>
       </div>
+
+      <p>
+        <%= form.label :personality_id %><br>
+        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type, {}, {class: "selection"} %>
+      </p>
     
       <p>
         <%= form.submit %>
