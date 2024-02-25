@@ -4,6 +4,8 @@
 set :bundle_command, 'bundle exec'
 job_type :runner,  "cd :path && :bundle_command rails runner -e :environment ':task' :output"
 
+env :GEM_HOME, ENV['GEM_HOME']
+
 # Creates a output log for you to view previously run cron jobs
 set :output, { error: 'log/cron_error_log.log', standard: 'log/cron_log.log' }
 
@@ -11,5 +13,5 @@ set :output, { error: 'log/cron_error_log.log', standard: 'log/cron_log.log' }
 set :environment, 'development'
 
 every 1.minute do
-  runner 'ReminderMailer.remind' 
+  runner 'Reminder.send_reminders'
 end

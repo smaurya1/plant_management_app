@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'addplant', to: 'pages#addplant'
   get 'users', to: 'pages#application'
   get '/dashboard', to: 'plants#index', as: 'dashboard'
-  # get 'send_email', to: 'emails#send_email'  
   get 'send_reminder', to: 'reminders#send_reminder'
   
   devise_for :users
