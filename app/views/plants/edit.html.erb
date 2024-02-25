@@ -6,14 +6,11 @@
 
 <h1>Edit Plant</h1>
 
-<%= button_to 'Delete Plant', plant_path(@plant), method: :delete%>
+<%= button_to 'Delete Plant', plant_path(@plant), method: :delete%><br>
     
 <%= form_for @plant, url: plant_path(@plant), method: :patch do |form| %>
   
-      <p>
-        <%= form.label :user_id %><br>
-        <%= form.collection_select :user_id, User.all, :id, :email, {}, {class: "selection"} %>
-      </p>
+      <%= form.hidden_field :user_id, value: current_user.id %>
     
       <div class="field">
         <%= form.label :name, class: 'input-lable' %>

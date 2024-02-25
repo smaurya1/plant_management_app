@@ -6,10 +6,8 @@
     <h1>New Plant</h1>
     
     <%= form_for @plant, url: plants_path do |form| %>
-      <p>
-        <%= form.label :user_id %><br>
-        <%= form.collection_select :user_id, User.all, :id, :email, {}, {class: "selection"} %>
-      </p>
+      
+      <%= form.hidden_field :user_id, value: current_user.id %>
     
       <div class="field">
         <%= form.label :name, class: 'input-lable' %>
@@ -25,7 +23,7 @@
         <%= form.label :location, class: 'input-lable' %>
         <%= form.text_field :location, class: 'middle-field' %>
       </div>
-      
+
       <div class="field">
         <%= form.label :wateringTime, class: 'input-lable' %><br>
         <%= form.time_select :wateringTime, :discard_hour => false, :default => {:hour => '00', :minute => '00'}, :include_seconds => false %>
