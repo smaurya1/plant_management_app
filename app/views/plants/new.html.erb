@@ -34,7 +34,8 @@
         <%= form.collection_select :personality_id, Personality.all, :id, :personality_type, {}, {class: "selection"} %>
       </div>
 
-      <div class="field">
+      <div class="field"><br>
+        <%= form.label :image %>
         <%= form.file_field :image, class: 'input-lable' %>
       </div>
     
