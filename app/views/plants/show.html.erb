@@ -1,7 +1,7 @@
 <%= render 'shared/topnav' %>
 
 <h1><%= @plant.name %></h1>
-<%= image_tag('plant_placeholder.webp', size: '150x150') %>
+<%= image_tag(@plant.image, size: '150x150') if @plant.image.attached? %>
 
 <table>
   <tr>
@@ -55,6 +55,12 @@
   <tr>
     <td><strong>Place of Origin:</strong></td>
     <td><%= "Here" %></td>
+  </tr>
+
+  <!-- Add a new row for displaying the image -->
+  <tr>
+    <td><strong>Image:</strong></td>
+    <td><%= image_tag(@plant.image, size: '150x150') if @plant.image.attached? %></td>
   </tr>
 </table>
 

@@ -1,5 +1,5 @@
 class PlantsController < ApplicationController
-    before_action :set_plant, only: [:show, :edit, :update, :destroy]
+  before_action :set_plant, only: [:show, :edit, :update, :destroy]
 
   def index
     @plants = Plant.all
@@ -14,6 +14,8 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
+    @plant.image.attach(params[:plant][:image]) if params[:plant][:image].present?
+
     if @plant.save
       redirect_to dashboard_path
     else
@@ -26,6 +28,7 @@ class PlantsController < ApplicationController
 
   def update
     if @plant.update(plant_params)
+      @plant.image.attach(params[:plant][:image]) if params[:plant][:image].present?
       redirect_to dashboard_path
     else
       render :edit
@@ -33,7 +36,6 @@ class PlantsController < ApplicationController
   end
 
   def destroy
-    @plant = Plant.find(params[:id])
     @plant.destroy
     redirect_to dashboard_path
   end
@@ -48,3 +50,4 @@ class PlantsController < ApplicationController
     params.require(:plant).permit(:user_id, :personality_id, :name, :species, :wateringTime, :location)
   end
 end
+
