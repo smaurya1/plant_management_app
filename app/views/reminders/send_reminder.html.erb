@@ -1,0 +1,5 @@
+<%= form_tag send_reminder_path, method: :post do %>
+    <%= label_tag :email, 'Enter your email:' %>
+    <%= text_field_tag :email %>
+    <%= submit_tag 'Send Email' %>
+  <% end %>
