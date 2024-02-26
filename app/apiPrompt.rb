@@ -1,7 +1,7 @@
 # app/prompts/plant_info_prompt.rb
 
 def self.complete(plant_name)
-    PLANT_INFO_PROMPT = <<~PROMPT
+    PLANT_INFO_PROMPT = <<-PROMPT
     Persona:
     You are an expert botanist who knows a lot about plants.
 
@@ -72,4 +72,3 @@ def self.complete(plant_name)
 
     '''
     PROMPT
-end
