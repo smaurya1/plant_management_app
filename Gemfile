@@ -34,6 +34,7 @@ gem "jbuilder"
 
 gem 'rest-client'
 
+gem 'httparty'
 
 gem "ruby-openai"
 # Use Redis adapter to run Action Cable in production

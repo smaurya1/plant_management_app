@@ -14,6 +14,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_25_000743) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  # create_table "chatgpts", force: :cascade do |t|
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  # end
+
   create_table "personalities", force: :cascade do |t|
     t.string "personality_type", null: false
   end
