@@ -6,7 +6,7 @@
   <% @plants.each do |plant| %>
     <div class="card">
       <%= link_to plant_path(plant) do %>
-        <%= image_tag('plant_placeholder.webp') %>
+        <%= image_tag(plant.image, size: '150x150') if plant.image.attached? %>
       <% end %>
       <h2><%= plant.name %></h2>
       <hr>

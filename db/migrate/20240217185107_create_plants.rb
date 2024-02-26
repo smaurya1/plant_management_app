@@ -8,5 +8,6 @@ class CreatePlants < ActiveRecord::Migration[7.1]
       t.time        :wateringTime, null: false
       t.string      :location, null: false
     end
+    add_column :plants, :image, :string
   end
 end

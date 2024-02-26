@@ -29,10 +29,14 @@
         <%= form.time_select :wateringTime, :discard_hour => false, :default => {:hour => '00', :minute => '00'}, :include_seconds => false %>
       </div>
 
-      <p>
+      <div class="field">
         <%= form.label :personality_id %><br>
         <%= form.collection_select :personality_id, Personality.all, :id, :personality_type, {}, {class: "selection"} %>
-      </p>
+      </div>
+
+      <div class="field">
+        <%= form.file_field :image, class: 'input-lable' %>
+      </div>
     
       <p>
         <%= form.submit %>
