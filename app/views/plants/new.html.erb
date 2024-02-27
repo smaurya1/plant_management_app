@@ -35,7 +35,7 @@
 
       <div class="field">
         <%= form.label :personality_id %><br>
-        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type, {}, {class: "selection"} %>
+        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type %>
       </div>
 
       <br>
