@@ -1,65 +1,67 @@
 <%= render 'shared/topnav' %>
 
-<h1><%= @plant.name %></h1>
-<%= image_tag(@plant.image, size: '150x150') if @plant.image.attached? %>
+<div class="center-container">
+  <h1><%= @plant.name %></h1>
+  <%= image_tag(@plant.image.attached? ? @plant.image : 'plant_placeholder.webp', size: '150x150') %>
 
-<table>
-  <tr>
-    <td><strong>Name:</strong></td>
-    <td><%= @plant.name %></td>
-  </tr>
-  <tr>
-    <td><strong>Species:</strong></td>
-    <td><%= @plant.species %></td>
-  </tr>
-  <tr>
-    <td><strong>Watering Time:</strong></td>
-    <td><%= @plant.wateringTime.strftime('%H:%M') %></td>
-  </tr>
-  <tr>
-    <td><strong>Location:</strong></td>
-    <td><%= @plant.location %></td>
-  </tr>
-  <tr>
-    <td><strong>Sun:</strong></td>
-    <td><%= "Please" %></td>
-  </tr>
-  <tr>
-    <td><strong>Soil:</strong></td>
-    <td><%= "Put" %></td>
-  </tr>
-  <tr>
-    <td><strong>Pests & Diseases:</strong></td>
-    <td><%= "JSON" %></td>
-  </tr>
-  <tr>
-    <td><strong>Care Level:</strong></td>
-    <td><%= "Info" %></td>
-  </tr>
-  <tr>
-    <td><strong>Propogation:</strong></td>
-    <td><%= "From" %></td>
-  </tr>
-  <tr>
-    <td><strong>Leaf:</strong></td>
-    <td><%= "ChatGPT" %></td>
-  </tr>
-  <tr>
-    <td><strong>Fruit:</strong></td>
-    <td><%= "All" %></td>
-  </tr>
-  <tr>
-    <td><strong>Growth Rate:</strong></td>
-    <td><%= "In" %></td>
-  </tr>
-  <tr>
-    <td><strong>Place of Origin:</strong></td>
-    <td><%= "Here" %></td>
-  </tr>
+  <table>
+    <tr>
+      <td><strong>Name:</strong></td>
+      <td><%= @plant.name %></td>
+    </tr>
+    <tr>
+      <td><strong>Species:</strong></td>
+      <td><%= @plant.species %></td>
+    </tr>
+    <tr>
+      <td><strong>Watering Time:</strong></td>
+      <td><%= @plant.wateringTime.strftime('%H:%M') %></td>
+    </tr>
+    <tr>
+      <td><strong>Location:</strong></td>
+      <td><%= @plant.location %></td>
+    </tr>
+    <tr>
+      <td><strong>Sun:</strong></td>
+      <td><%= "Please" %></td>
+    </tr>
+    <tr>
+      <td><strong>Soil:</strong></td>
+      <td><%= "Put" %></td>
+    </tr>
+    <tr>
+      <td><strong>Pests & Diseases:</strong></td>
+      <td><%= "JSON" %></td>
+    </tr>
+    <tr>
+      <td><strong>Care Level:</strong></td>
+      <td><%= "Info" %></td>
+    </tr>
+    <tr>
+      <td><strong>Propogation:</strong></td>
+      <td><%= "From" %></td>
+    </tr>
+    <tr>
+      <td><strong>Leaf:</strong></td>
+      <td><%= "ChatGPT" %></td>
+    </tr>
+    <tr>
+      <td><strong>Fruit:</strong></td>
+      <td><%= "All" %></td>
+    </tr>
+    <tr>
+      <td><strong>Growth Rate:</strong></td>
+      <td><%= "In" %></td>
+    </tr>
+    <tr>
+      <td><strong>Place of Origin:</strong></td>
+      <td><%= "Here" %></td>
+    </tr>
 
-</table>
+  </table>
 
-<br>
+  <br>
 
-<td><%= link_to 'Edit', edit_plant_path(@plant) %></td><br><br>
-<td><%= button_to 'Delete', plant_path(@plant), method: :delete %></td>
+  <td><%= link_to 'Edit', edit_plant_path(@plant) %></td><br><br>
+  <td><%= button_to 'Delete', plant_path(@plant), method: :delete %></td>
+</div>

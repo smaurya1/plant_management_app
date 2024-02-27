@@ -1,12 +1,9 @@
-.topnav {
-  background-color: #202020;
-  overflow: hidden;
-}
+
 
 .topnav .nav-link {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -15,7 +12,7 @@
 .topnav .logout-link {
   float: right;
   font-size: 12pt;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -46,6 +43,7 @@ h1 {
   font-weight: normal;
   text-align: center;
   color: #404040;
+  padding-top: 30px;
 }
 
 h2 {
@@ -194,12 +192,28 @@ h2 {
   height: 450px;
 }
 
-.card img {
-  max-width: 100%;
+img {
   border-radius: 8px;
-  height: auto;
+  height: 300px;
+  width: 300px;
   display: block;
   margin: 0 auto 10px;
+  object-fit: contain;
+}
+
+.card.add-plant-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #404040;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card.add-plant-card:hover {
+  background-color: #f0f0f0;
+  color: #388E3C;
 }
 
 .selection {
@@ -222,4 +236,45 @@ h2 {
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 12px;
+}
+
+select {
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for ease of use */
+  font-size: 16px; /* Match label text size */
+  color: #333; /* Text color */
+  background-color: #fff; /* Clean background */
+  -webkit-appearance: none; /* Remove default styling on iOS */
+  margin-top: 5px; /* Space between label and select */
+}
+
+/* Optionally, add focus and hover styles for interactivity */
+select:focus {
+  border-color: #007aff; /* Highlight color, akin to Apple's blue */
+  outline: none; /* Remove default focus outline */
+}
+
+select:hover {
+  border-color: #007aff; /* Same as focus for consistency */
+}
+
+input[type="submit"] {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #005ecb;
+}
+
+p {
+  text-align: center;
+
 }

@@ -6,8 +6,6 @@
 
 <h1>Edit Plant</h1>
 
-<%= button_to 'Delete Plant', plant_path(@plant), method: :delete%><br>
-    
 <%= form_for @plant, url: plant_path(@plant), method: :patch do |form| %>
   
       <%= form.hidden_field :user_id, value: current_user.id %>
@@ -24,22 +22,28 @@
 
       <div class="field">
         <%= form.label :location, class: 'input-lable' %>
-        <%= form.text_field :location, class: 'middle-field' %>
+        <%= form.text_field :location, class: 'last-field' %>
       </div>
+      
+      <br>
 
-      <div class="field">
-        <%= form.label :wateringTime, class: 'input-lable' %><br>
+      <div>
+        <%= form.label :wateringTime %><br>
         <%= form.time_select :wateringTime, :discard_hour => false, :default => {:hour => '00', :minute => '00'}, :include_seconds => false %>
       </div>
+      
+      <br>
 
       <div>
         <%= form.label :personality_id %><br>
-        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type, {}, {class: "selection"} %>
+        <%= form.collection_select :personality_id, Personality.all, :id, :personality_type %>
       </div>
 
-      <div class="field"><br>
+      <br>
+      
+      <div>
         <%= form.label :image %>
-        <%= form.file_field :image, accept: 'image/*', class: 'input-lable' %>
+        <%= form.file_field :image, accept: 'image/*' %>
       </div>
     
       <p>
