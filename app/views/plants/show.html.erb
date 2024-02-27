@@ -2,7 +2,7 @@
 
 <div class="center-container">
   <h1><%= @plant.name %></h1>
-  <%= image_tag(@plant.image.attached? ? @plant.image : 'plant_placeholder.webp', size: '150x150') %>
+  <%= image_tag(@plant.image.attached? ? @plant.image : 'plant_placeholder.webp', size: '150x150', class:'img') %>
 
   <table>
     <tr>
