@@ -55,7 +55,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_041533) do
     t.string "soil", null: false
     t.string "pests", null: false
     t.string "careLevel", null: false
-    t.string "propogation", default: "default value"
+    t.string "propogation", null: false
     t.string "leaf", null: false
     t.string "fruit", null: false
     t.string "growthRate", null: false

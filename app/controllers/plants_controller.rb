@@ -16,31 +16,32 @@ class PlantsController < ApplicationController
   def create
     @plant = Plant.new(plant_params)
     @plant.image.attach(params[:plant][:image]) if params[:plant][:image].present?
-
-    #chatGPT
+  
+    # chatGPT
     species = params[:plant][:species]
     plantInformationJSON = ChatGPTService.complete(species)
-    puts plantInformationJSON
 
+    plant_info = plantInformationJSON[0]
+  
     finalPlant = PlantInfo.new(
       plant_id: params[:plant_id],
-      scientificName: plantInformationJSON[0]['scientific name'],
-      wateringTimeDays: plantInformationJSON[0]['Watering time(days)'],
-      personality: plantInformationJSON[0]['Personality'],
-      sun: plantInformationJSON[0]['Sun'],
-      soil: plantInformationJSON[0]['Soil'],
-      pests: plantInformationJSON[0]['Pests'],
-      careLevel: plantInformationJSON[0]['Care Level'],
-      propogation: plantInformationJSON[0]['Propogation'],
-      leaf: plantInformationJSON[0]['Leaf'],
-      fruit: plantInformationJSON[0]['Fruit'],
-      growthRate: plantInformationJSON[0]['Growth Rate'],
-      origin: plantInformationJSON[0]['Place of origin']
+      scientificName: plant_info['scientific name'],
+      wateringTimeDays: plant_info['Watering time(days)'],
+      personality: plant_info['Personality'],
+      sun: plant_info['Sun'],
+      soil: plant_info['Soil'],
+      pests: plant_info['Pests'],
+      careLevel: plant_info['Care Level'],
+      propogation: plant_info['Propagation'],
+      leaf: plant_info['Leaf'],
+      fruit: plant_info['Fruit'],
+      growthRate: plant_info['Growth Rate'],
+      origin: plant_info['Place of origin']
     )
+  
     @plant.plant_info = finalPlant
-
+  
     if @plant.save
-
       redirect_to dashboard_path
     else
       render :new
@@ -53,10 +54,39 @@ class PlantsController < ApplicationController
   def update
     if @plant.update(plant_params)
       @plant.image.attach(params[:plant][:image]) if params[:plant][:image].present?
-      redirect_to dashboard_path
-    else
-      render :edit
-    end
+  
+      # chatGPT
+      species = params[:plant][:species]
+      plantInformationJSON = ChatGPTService.complete(species)
+  
+      plant_info = plantInformationJSON[0]
+  
+      finalPlant = PlantInfo.new(
+          plant_id: params[:plant_id],
+          scientificName: plant_info['scientific name'],
+          wateringTimeDays: plant_info['Watering time(days)'],
+          personality: plant_info['Personality'],
+          sun: plant_info['Sun'],
+          soil: plant_info['Soil'],
+          pests: plant_info['Pests'],
+          careLevel: plant_info['Care Level'],
+          propogation: plant_info['Propagation'],
+          leaf: plant_info['Leaf'],
+          fruit: plant_info['Fruit'],
+          growthRate: plant_info['Growth Rate'],
+          origin: plant_info['Place of origin']
+        )
+        @plant.plant_info.destroy if @plant.plant_info
+        @plant.plant_info = finalPlant
+  
+        if @plant.save
+          redirect_to dashboard_path
+        else
+          render :edit
+        end
+      else
+        render :edit
+      end
   end
 
   def destroy
@@ -75,4 +105,3 @@ class PlantsController < ApplicationController
     params.require(:plant).permit(:user_id, :personality_id, :name, :species, :wateringTime, :location, :image)
   end
 end
-
