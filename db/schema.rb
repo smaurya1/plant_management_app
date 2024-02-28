@@ -42,11 +42,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_030922) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "chatgpts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "personalities", force: :cascade do |t|
     t.string "personality_type", null: false
   end
@@ -56,7 +51,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_030922) do
     t.bigint "personality_id"
     t.string "name", null: false
     t.string "species", null: false
-    t.string "wateringTime", null: false
+    t.time "wateringTime", null: false
+    t.string "location", null: false
+    t.string "image"
     t.index ["personality_id"], name: "index_plants_on_personality_id"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end
