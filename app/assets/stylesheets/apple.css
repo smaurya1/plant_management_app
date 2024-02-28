@@ -221,7 +221,7 @@ select {
   font-size: 16px;
   color: #333;
   background-color: #fff;
-  -webkit-appearance: none;
+  appearance: none;
   margin-top: 5px;
 }
 
@@ -251,5 +251,8 @@ input[type="submit"]:hover {
 
 p {
   text-align: center;
+}
 
+.details td {
+  padding: 10px;
 }
