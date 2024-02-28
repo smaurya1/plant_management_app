@@ -60,6 +60,7 @@ class PlantsController < ApplicationController
   end
 
   def destroy
+    @plant.plant_info.destroy
     @plant.destroy
     redirect_to dashboard_path
   end
