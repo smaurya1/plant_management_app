@@ -1,5 +1,5 @@
 require 'httparty'
-
+require 'json'
 
 
 class ChatGPTService
@@ -83,7 +83,11 @@ class ChatGPTService
     PROMPT
 
     response = post('/completions', body: { prompt: prompt, model: 'gpt-3.5-turbo-instruct', max_tokens: 500 }.to_json)
-    JSON.parse(response.body)
+    parsed = JSON.parse(response.body)
+    output = parsed["choices"][0]["text"].strip
+    jsonOut = output.to_json
+    puts jsonOut
+    
   end
 end
 
