@@ -60,6 +60,9 @@
 
   <br>
 
-  <td><%= link_to 'Edit', edit_plant_path(@plant) %></td><br><br>
-  <td><%= button_to 'Delete', plant_path(@plant), method: :delete %></td>
+  <div class="button-group">
+    <%= link_to 'Edit', edit_plant_path(@plant), class: 'edit-button' %>
+    <%= button_to 'Delete', plant_path(@plant), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
+  </div>
+
 </div>

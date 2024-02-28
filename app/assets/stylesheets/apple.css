@@ -10,7 +10,7 @@
 .topnav .logout-link {
   float: right;
   font-size: 12pt;
-  color: black;
+  color: red;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -234,8 +234,9 @@ select:hover {
   border-color: #007aff;
 }
 
-input[type="submit"] {
+input[type="submit"], .edit-button {
   background-color: #007aff;
+  text-decoration: none;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -245,7 +246,23 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+.delete-button {
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: lightcoral;
+}
+
+input[type="submit"]:hover, .edit-button:hover {
   background-color: #005ecb;
 }
 
@@ -255,4 +272,10 @@ p {
 
 .details td {
   padding: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 100%;
 }
