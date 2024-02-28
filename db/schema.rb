@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_26_030922) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_28_041533) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,6 +44,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_030922) do
 
   create_table "personalities", force: :cascade do |t|
     t.string "personality_type", null: false
+  end
+
+  create_table "plant_infos", force: :cascade do |t|
+    t.bigint "plant_id"
+    t.string "scientificName", null: false
+    t.string "wateringTimeDays", null: false
+    t.string "personality", null: false
+    t.string "sun", null: false
+    t.string "soil", null: false
+    t.string "pests", null: false
+    t.string "careLevel", null: false
+    t.string "propogation", default: "default value"
+    t.string "leaf", null: false
+    t.string "fruit", null: false
+    t.string "growthRate", null: false
+    t.string "origin", null: false
+    t.index ["plant_id"], name: "index_plant_infos_on_plant_id"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -85,6 +102,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_030922) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "plant_infos", "plants"
   add_foreign_key "plants", "personalities"
   add_foreign_key "plants", "users"
   add_foreign_key "prompts", "personalities"

@@ -9,7 +9,7 @@ class CreatePlantInfos < ActiveRecord::Migration[7.1]
       t.string      :soil, null: false
       t.string      :pests, null: false
       t.string      :careLevel, null: false
-      t.string      :propogation, null: false
+      t.string      :propogation, default: "default value"
       t.string      :leaf, null: false
       t.string      :fruit, null: false
       t.string      :growthRate, null: false
