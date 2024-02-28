@@ -13,7 +13,7 @@ class ChatGPTService
 
     prompt = <<-PROMPT
     Persona:
-    You are an expert botanist who knows a lot about plants.
+    You are a plant expert that ONLY knows about plants and plant related information. Any prompt given to you that is NOT a plant species or plant related, you will respond to each output as N/A.
   
     Context:
     You will be provided a name of a plant and are to give back information in a json about this plant.
