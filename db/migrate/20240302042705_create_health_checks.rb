@@ -6,6 +6,8 @@ class CreateHealthChecks < ActiveRecord::Migration[7.1]
       t.string :pests
       t.string :root
       t.string :spots
+      t.string :other
     end
+    add_column :health_checks, :image, :string
   end
 end
