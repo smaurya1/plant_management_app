@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_28_041533) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_02_042705) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_041533) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "health_checks", force: :cascade do |t|
+    t.bigint "plant_id"
+    t.string "leafColor"
+    t.string "pests"
+    t.string "root"
+    t.string "spots"
+    t.index ["plant_id"], name: "index_health_checks_on_plant_id"
   end
 
   create_table "personalities", force: :cascade do |t|
@@ -102,6 +111,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_041533) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "health_checks", "plants"
   add_foreign_key "plant_infos", "plants"
   add_foreign_key "plants", "personalities"
   add_foreign_key "plants", "users"

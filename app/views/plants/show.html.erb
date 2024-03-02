@@ -61,6 +61,7 @@
   <br>
 
   <div class="button-group">
+    <%= link_to 'Health Checkups', plant_health_checks_path(@plant) %>
     <%= link_to 'Edit', edit_plant_path(@plant), class: 'edit-button' %>
     <%= button_to 'Delete', plant_path(@plant), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
   </div>

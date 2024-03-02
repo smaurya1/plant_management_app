@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   get 'users', to: 'pages#application'
   get '/dashboard', to: 'plants#index', as: 'dashboard'
   get 'send_reminder', to: 'reminders#send_reminder'
+  get 'healthCheck', to: 'health_checks#index'
   
   devise_for :users
 
-  resources :plants
+  resources :plants do
+    resources :health_checks
+  end
 
 end
