@@ -17,7 +17,7 @@ class HealthChecksController < ApplicationController
         @health_check = HealthCheck.new(health_params)
         @health_check.image.attach(params[:health_check][:image]) if params[:health_check][:image].present?
         if @health_check.save
-            redirect_to health_check_path
+            redirect_to health_check_path(@health_check)
         else
             render :new
         end
@@ -26,11 +26,6 @@ class HealthChecksController < ApplicationController
     def update
         if @health_check.update(health_params)
             @health_check.image.attach(params[:health_check][:image]) if params[:health_check][:image].present?
-            if @plant.save
-                redirect_to dashboard_path
-            else
-                render :edit
-            end
         else
             render :edit
         end
@@ -38,7 +33,7 @@ class HealthChecksController < ApplicationController
 
     def destroy
         @health_check.destroy
-        redirect_to health_check_path
+        redirect_to health_check_path(@health_check)
     end
 
     def set_plant
@@ -46,6 +41,6 @@ class HealthChecksController < ApplicationController
     end
 
     def health_params
-        params.require(:health_check).permit(:plant_id, :leafColor, :pests, :root, :spots, :other, :image)
+        params.require(:health_check).permit(:leafColor, :pests, :root, :spots, :other, :image, :plant_id)
       end
 end
