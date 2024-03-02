@@ -1,3 +1,14 @@
 <%= render 'shared/topnav' %>
 
 <h1>Health Checkups</h1>
+
+<div class="health-check-cards">
+  <% @plant.health_checks.each do |check| %>
+    <p><strong>Leaf Color:</strong> <%= check.leafColor %></p>
+    <p><strong>Pests:</strong> <%= check.pests %></p>
+    <p><strong>Root:</strong> <%= check.root %></p>
+    <p><strong>Spots:</strong> <%= check.spots %></p>
+    <p><strong>Other:</strong> <%= check.other %></p>
+  <% end %>
+    <%= link_to "+", new_plant_health_check_path(@plant), class: "card add-health-check-card" %>
+</div>
