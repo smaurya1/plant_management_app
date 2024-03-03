@@ -48,6 +48,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_042705) do
     t.string "pests"
     t.string "root"
     t.string "spots"
+    t.string "other"
+    t.string "image"
     t.index ["plant_id"], name: "index_health_checks_on_plant_id"
   end
 
