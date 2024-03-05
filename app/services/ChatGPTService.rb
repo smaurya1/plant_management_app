@@ -101,4 +101,21 @@ class ChatGPTService
     return jsonString
     
   end
+
+
+
+  def self.email(user, plant_name, personality)
+    prompt = <<-PROMPT
+    Youre a #{plant_name} and need water. Your personality is #{personality}
+    and your owner is named #{user}. Ask them for water. 
+    
+
+    PROMPT
+    
+    response = post('/completions', body: { prompt: prompt, model: 'gpt-3.5-turbo-instruct', max_tokens: 500 }.to_json)
+    parsed = JSON.parse(response.body)
+
+
+  end
+
 end
