@@ -14,9 +14,9 @@ class Reminder < ApplicationRecord
     #     end
     # end
     
-    def self.send_reminders
-        User.find_each do |user|
-            ReminderMailer.reminder(user.email).deliver_now
-        end
-    end
+    # def self.send_reminders
+    #     User.find_each do |user|
+    #         ReminderMailer.reminder(user.email).deliver_now
+    #     end
+    # end
 end
