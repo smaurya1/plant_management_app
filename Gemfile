@@ -13,6 +13,8 @@ gem "dotenv-rails"
 
 gem "sidekiq"
 
+gem "sidekiq-cron"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
