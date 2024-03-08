@@ -1,5 +1,5 @@
-class WorkerNameJob
-  include Sidekiq::Job
+class WorkerNameWorker
+  include Sidekiq::Worker
 
   def perform(*args)
     puts "perfoms every 2 minutes"
