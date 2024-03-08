@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <div class="topnav">
+      <%= link_to 'Home', dashboard_path, class: 'nav-link' %>
+      <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-link' %>
+    </div>
     <%= yield %>
   </body>
 </html>
