@@ -8,6 +8,10 @@
     <%= form_for @health_check, url: plant_health_checks_path do |form| %>
     
       <div class="field">
+        <%= form.hidden_field :plant_id, value: @plant.id %>
+      </div>
+
+      <div class="field">
         <%= form.label :leafColor, class: 'input-lable' %>
         <%= form.text_field :leafColor, class: 'first-field' %>
       </div>
@@ -44,6 +48,7 @@
       <p>
         <%= form.submit "Create Health Checkup" %>
       </p>
+
     <% end %>
 </div>
 

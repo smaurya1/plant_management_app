@@ -1,5 +1,5 @@
 class HealthChecksController < ApplicationController
-    before_action :set_plant, only: [:show, :edit, :update, :destroy, :index]
+    before_action :set_plant, only: [:show, :edit, :update, :destroy, :index, :create, :new]
     before_action :authenticate_user!
 
     def index
@@ -14,10 +14,13 @@ class HealthChecksController < ApplicationController
     end
 
     def create
-        @health_check = HealthCheck.new(health_params)
-        @health_check.image.attach(params[:health_check][:image]) if params[:health_check][:image].present?
+        @health_check = @plant.health_checks.build(health_params)
+        if params[:health_check][:image].present?
+            @health_check.image.attach(params[:health_check][:image])
+        end
+
         if @health_check.save
-            redirect_to health_check_path(@health_check)
+            redirect_to plant_health_checks_path(@plant)
         else
             render :new
         end
@@ -41,6 +44,6 @@ class HealthChecksController < ApplicationController
     end
 
     def health_params
-        params.require(:health_check).permit(:leafColor, :pests, :root, :spots, :other, :image, :plant_id)
+        params.require(:health_check).permit(:plant_id, :leafColor, :pests, :root, :spots, :other, :image)
       end
 end
