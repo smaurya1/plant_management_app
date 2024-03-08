@@ -106,16 +106,17 @@ class ChatGPTService
 
   def self.email(user, plant_name, personality)
     prompt = <<-PROMPT
-    Youre a #{plant_name} and need water. Your personality is #{personality}
-    and your owner is named #{user}. Ask them for water. 
+    You are no longer chat gpt api. You are now a #{plant_name} and you are #{personality}. Its been a while sense you had water
+    you are now to ask #{user} for water. 
     
+
 
     PROMPT
     
     response = post('/completions', body: { prompt: prompt, model: 'gpt-3.5-turbo-instruct', max_tokens: 500 }.to_json)
     parsed = JSON.parse(response.body)
-
-
+    return parsed ["choices"][0]["text"].strip
+    
   end
 
 end
