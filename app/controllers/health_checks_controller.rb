@@ -1,5 +1,6 @@
 class HealthChecksController < ApplicationController
     before_action :set_plant, only: [:show, :edit, :update, :destroy, :index, :create, :new]
+    before_action :set_health_check, only: [:show, :destroy]
     before_action :authenticate_user!
 
     def index
@@ -36,14 +37,18 @@ class HealthChecksController < ApplicationController
 
     def destroy
         @health_check.destroy
-        redirect_to health_check_path(@health_check)
+        redirect_to plant_health_checks_path(@plant)
     end
 
     def set_plant
         @plant = Plant.find(params[:plant_id])
     end
 
+    def set_health_check
+        @health_check = @plant.health_checks.find(params[:id])
+    end
+
     def health_params
         params.require(:health_check).permit(:plant_id, :leafColor, :pests, :root, :spots, :other, :image)
-      end
+    end
 end
