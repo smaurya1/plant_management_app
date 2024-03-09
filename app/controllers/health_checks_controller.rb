@@ -35,6 +35,9 @@ class HealthChecksController < ApplicationController
     end
 
     def update
+        # chat GPT
+        species = @plant.species
+        @health_check.doctor = ChatGPTService.health(species, @health_check.leafColor, @health_check.pests, @health_check.root, @health_check.spots, @health_check.other)
         if @health_check.update(health_params)
           if params[:health_check][:image].present?
             @health_check.image.attach(params[:health_check][:image])
