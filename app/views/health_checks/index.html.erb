@@ -3,7 +3,7 @@
 <div class="health-check-cards">
   <% @plant.health_checks.each do |check| %>
     <div class="card">
-    <%= link_to plant_health_checks_path(@plant) do %>
+    <%= link_to plant_health_check_path(@plant, check) do %>
       <%= image_tag(check.image.attached? ? check.image : 'plant_placeholder.webp', size: '150x150', class: 'img') %>
     <% end %>
     <p><strong>Leaf Color:</strong> <%= check.leafColor %></p>
