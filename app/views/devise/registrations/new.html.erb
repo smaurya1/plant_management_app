@@ -27,6 +27,11 @@
   </div>
 
   <div class="field">
+  <%= f.label :time_zone, class: 'input-label' %>
+  <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all, default: "UTC", class: 'middle-field' %>
+  </div>
+
+  <div class="field">
     <%= f.label :password, class: 'input-label' %>
     <%= f.password_field :password, autocomplete: "new-password", class: 'middle-field' %>
   </div>
