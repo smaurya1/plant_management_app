@@ -8,6 +8,7 @@ class CreateHealthChecks < ActiveRecord::Migration[7.1]
       t.string   :spots
       t.string   :other
       t.date     :currentDay
+      t.string   :doctor
     end
     add_column :health_checks, :image, :string
   end
