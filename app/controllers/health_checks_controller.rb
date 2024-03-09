@@ -1,6 +1,6 @@
 class HealthChecksController < ApplicationController
     before_action :set_plant, only: [:show, :edit, :update, :destroy, :index, :create, :new]
-    before_action :set_health_check, only: [:show, :destroy]
+    before_action :set_health_check, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_user!
 
     def index
@@ -27,13 +27,19 @@ class HealthChecksController < ApplicationController
         end
     end
 
+    def edit
+    end
+
     def update
         if @health_check.update(health_params)
-            @health_check.image.attach(params[:health_check][:image]) if params[:health_check][:image].present?
+          if params[:health_check][:image].present?
+            @health_check.image.attach(params[:health_check][:image])
+          end
+          redirect_to plant_health_check_path(@plant, @health_check)
         else
-            render :edit
+          render :edit
         end
-    end
+      end
 
     def destroy
         @health_check.destroy
