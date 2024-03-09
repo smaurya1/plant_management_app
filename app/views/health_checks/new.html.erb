@@ -11,6 +11,10 @@
       </div>
 
       <div class="field">
+        <%= form.hidden_field :currentDay, value: Date.today %>
+      </div>
+
+      <div class="field">
         <%= form.label :leafColor, class: 'input-lable' %>
         <%= form.text_field :leafColor, class: 'first-field' %>
       </div>

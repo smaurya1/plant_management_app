@@ -1,5 +1,6 @@
 <div class="center-container">
   <h1><%= @plant.name %></h1>
+  <h1><%= @health_check.currentDay %></h1>
   <%= image_tag(@health_check.image.attached? ? @health_check.image : 'plant_placeholder.webp', size: '150x150', class: 'img') %>
   <table class='details'>
     <tr>

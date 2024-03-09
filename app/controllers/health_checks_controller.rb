@@ -55,6 +55,6 @@ class HealthChecksController < ApplicationController
     end
 
     def health_params
-        params.require(:health_check).permit(:plant_id, :leafColor, :pests, :root, :spots, :other, :image)
+        params.require(:health_check).permit(:plant_id, :leafColor, :pests, :root, :spots, :other, :image, :currentDay)
     end
 end
