@@ -1,6 +1,11 @@
 # Names the job, frequency, and the class that needs to be performed
 
-my_first_job:
-  cron: "*/2 * * * *"
-  class: "WorkerNameWorker"
+# my_first_job:
+#   cron: "*/2 * * * *"
+#   class: "WorkerNameWorker"
+#   queue: "default"
+
+plant_watering_worker:
+  cron: "*/1 * * * *"
+  class: PlantWateringJob
   queue: "default"

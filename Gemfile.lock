@@ -346,7 +346,7 @@ DEPENDENCIES
   rest-client
   ruby-openai
   selenium-webdriver
-  sidekiq
+  sidekiq (~> 7.2.2)
   sidekiq-cron
   sprockets-rails
   stimulus-rails

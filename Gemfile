@@ -11,7 +11,7 @@ gem "whenever"
 
 gem "dotenv-rails"
 
-gem "sidekiq"
+gem "sidekiq", "~> 7.2.2"
 
 gem "sidekiq-cron"
 
