@@ -1,0 +1,6 @@
+# Names the job, frequency, and the class that needs to be performed
+
+plant_watering_worker:
+  cron: "/1 * * * *"
+  class: PlantWateringJob
+  queue: "default"

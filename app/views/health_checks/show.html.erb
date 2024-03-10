@@ -1,0 +1,41 @@
+<div class="center-container">
+  <h1><%= @plant.name %></h1>
+  <h1><%= @health_check.currentDay %></h1>
+  <%= image_tag(@health_check.image.attached? ? @health_check.image : 'plant_placeholder.webp', size: '150x150', class: 'img') %>
+  <table class='details'>
+    <tr>
+      <td><strong>Leaf Color:</strong></td>
+      <td><%= @health_check.leafColor %></td>
+    </tr>
+    <tr>
+      <td><strong>Pests:</strong></td>
+      <td><%= @health_check.pests %></td>
+    </tr>
+    <tr>
+      <td><strong>Root:</strong></td>
+      <td><%= @health_check.root %></td>
+    </tr>
+    <tr>
+      <td><strong>Spots:</strong></td>
+      <td><%= @health_check.spots %></td>
+    </tr>
+    <tr>
+      <td><strong>Other:</strong></td>
+      <td><%= @health_check.other %></td>
+    </tr>
+    <tr>
+      <td><strong>Doctor:</strong></td>
+      <td><%= @health_check.doctor %></td>
+    </tr>
+    <tr>
+  </table>
+
+  <br>
+
+  <div class="button-group">
+    <%= link_to 'Health Checkups', plant_health_checks_path(@plant) %>
+    <%= link_to 'Edit', edit_plant_health_check_path(@plant, @health_check), class: 'edit-button' %>
+    <%= button_to 'Delete', plant_health_check_path(@plant, @health_check), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
+  </div>
+
+</div>

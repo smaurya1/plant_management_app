@@ -1,0 +1,58 @@
+
+<body>
+<div class="center-container">
+
+    <h1>Edit Health Checkup</h1>
+    
+    <%= form_for [@plant, @health_check], url: plant_health_check_path(@plant, @health_check), method: :patch do |form| %>
+    
+      <div class="field">
+        <%= form.hidden_field :plant_id, value: @plant.id %>
+      </div>
+
+      <div class="field">
+        <%= form.hidden_field :currentDay, value: @health_check.currentDay %>
+      </div>
+
+      <div class="field">
+        <%= form.label :leafColor, class: 'input-lable' %>
+        <%= form.text_field :leafColor, class: 'first-field' %>
+      </div>
+
+      <div class="field">
+        <%= form.label :pests, class: 'input-lable' %>
+        <%= form.text_field :pests, class: 'middle-field' %>
+      </div>
+
+      <div class="field">
+        <%= form.label :root, class: 'input-lable' %>
+        <%= form.text_field :root, class: 'middle-field' %>
+      </div>
+
+      <div class="field">
+        <%= form.label :spots, class: 'input-lable' %>
+        <%= form.text_field :spots, class: 'middle-field' %>
+      </div>
+
+      <div class="field">
+        <%= form.label :other, class: 'input-lable' %>
+        <%= form.text_field :other, class: 'last-field' %>
+      </div>
+
+      <br><br>
+
+      <div class="field"><br>
+        <%= form.label :image %>
+        <%= form.file_field :image, accept: 'image/*', class: 'input-lable' %>
+      </div>
+
+      <br>
+    
+      <p>
+        <%= form.submit "Edit Health Checkup" %>
+      </p>
+
+    <% end %>
+</div>
+
+</body>

@@ -106,16 +106,39 @@ class ChatGPTService
 
   def self.email(user, plant_name, personality)
     prompt = <<-PROMPT
-    Youre a #{plant_name} and need water. Your personality is #{personality}
-    and your owner is named #{user}. Ask them for water. 
+    You are no longer chat gpt api. You are now a #{plant_name} and you are #{personality}. Its been a while since you had water
+    you are now to ask #{user} for water. 
     
+
 
     PROMPT
     
     response = post('/completions', body: { prompt: prompt, model: 'gpt-3.5-turbo-instruct', max_tokens: 500 }.to_json)
     parsed = JSON.parse(response.body)
+    return parsed ["choices"][0]["text"].strip
+    
+  end
 
+  def self.health(plant_name, leafColor, pests, root, spots, other)
+    prompt = <<-PROMPT
+    Person:
+    You are a plant expert that ONLY knows about plants and plant related information. If any information is not plant related, ignore it.
 
+    Context:
+    You will be provided a species name, as well as the leaf color, pests, root, spots, and other information.
+    
+    Task:
+    You will write a few sentences describing the current health of the plant based on the provided information. If the plant is unhealthy in any way, please describe how the user could make the plant healthier again.
+
+    Here are the actual inputs:
+    #{plant_name} #{leafColor} #{pests} #{root} #{spots} #{other}
+
+    PROMPT
+
+    response = post('/completions', body: { prompt: prompt, model: 'gpt-3.5-turbo-instruct', max_tokens: 500 }.to_json)
+    parsed = JSON.parse(response.body)
+    output = parsed["choices"][0]["text"].strip
+    return output
   end
 
 end

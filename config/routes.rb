@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,8 +11,10 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'plants#index', as: 'dashboard'
   get 'send_reminder', to: 'reminders#send_reminder'
   get 'healthCheck', to: 'health_checks#index'
+
+  mount Sidekiq::Web => '/sidekiq'  
   
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
 
   resources :plants do
     resources :health_checks
