@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   mount Sidekiq::Web => '/sidekiq'  
   
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
 
   resources :plants do
     resources :health_checks
