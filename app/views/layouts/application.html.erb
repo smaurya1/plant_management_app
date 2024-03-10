@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>LeafLife Care</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "apple", "data-turbo-track": "reload" %>
   </head>
 
   <body>
     <div class="topnav">
       <%= link_to 'Home', dashboard_path, class: 'nav-link' %>
-      <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-link' %>
+      
+      <div class="dropdown">
+        <button class="logout-link" onclick="toggleDropdown()">
+          <%= image_tag('person.circle.svg') %>
+        </button>
+        <div id="dropdownMenu" class="dropdown-content">
+          <%= link_to 'Profile', edit_user_registration_path %>
+          <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-link' %>
+        </div>
+      </div>
+      
     </div>
     <%= yield %>
   </body>

@@ -1,3 +1,5 @@
+/* nav bar */
+
 .topnav {
   padding-bottom: 50px;
 }
@@ -11,10 +13,9 @@
   text-decoration: none;
 }
 
-.topnav .logout-link {
+.dropdown{
   float: right;
   font-size: 12pt;
-  color: red;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -23,6 +24,53 @@
   background-color: inherit;
   cursor: pointer;
 }
+
+.logout-link {
+  color: red;
+  font-size: 12pt;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 150px;
+  z-index: 1;
+  top: 70px;
+  right: 30px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 
 .center-container {
   display: flex;
@@ -99,7 +147,7 @@ h2 {
   margin: 0 auto;
   border-radius: 0 0 15px 15px;
   border: 1px solid #808080;
-  padding-right: 50px; /* Leave space for the submit button */
+  padding-right: 50px;
 }
 
 .middle-field {
@@ -115,7 +163,7 @@ h2 {
 }
 
 .field {
-  margin-bottom: -1px; /* Adjust margin to visually merge fields */
+  margin-bottom: -1px;
   position: relative;
 }
 
@@ -129,7 +177,7 @@ h2 {
 }
 
 .remember input[type="checkbox"], .remember label {
-  margin: 0 5px; /* Add some space between the checkbox and the label */
+  margin: 0 5px;
 }
 
 .input-field:focus {
@@ -148,7 +196,6 @@ h2 {
   pointer-events: none;
 }
 
-/* highlight color #007bff */
 .first-field:focus, .last-field:focus, .middle-field:focus, .one-field:focus {
   outline: none;
   border: 2px solid #007bff;
@@ -173,7 +220,7 @@ h2 {
   padding: 20px;
 }
 
-.actions input[type="submit"] {
+.actions input[type="submit", "Update"] {
   color: #007bff;
   padding: 10px 20px;
   font-size: 12pt;
@@ -193,6 +240,7 @@ h2 {
   padding: 20px;
   width: 300px;
   height: 450px;
+  text-decoration: none;
 }
 
 .img{
@@ -251,8 +299,7 @@ input[type="submit"], .edit-button {
   transition: background-color 0.3s ease;
 }
 
-.delete-button {
-  background-color: red;
+.delete-button, .checkup-button {
   text-decoration: none;
   color: white;
   border: none;
@@ -263,8 +310,20 @@ input[type="submit"], .edit-button {
   transition: background-color 0.3s ease;
 }
 
+.delete-button {
+  background-color: red;
+}
+
+.checkup-button {
+  background-color: green;
+}
+
 .delete-button:hover {
   background-color: lightcoral;
+}
+
+.checkup-button:hover {
+  background-color: #388E3C;
 }
 
 input[type="submit"]:hover, .edit-button:hover {
@@ -282,5 +341,5 @@ p {
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 100%;
+  gap: 50%;
 }
