@@ -15,10 +15,10 @@ module Myapp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
-    # config.action_mailer.default_options = { timezone: 'Central Time (US & Canada)' }
+    config.action_mailer.default_options = { timezone: 'Central Time (US & Canada)' }
     
     # Set the timezone to "Central Time (US & Canada)"
-    # config.time_zone = "Central Time (US & Canada)"
+    config.time_zone = "Central Time (US & Canada)"
 
     # Set the default timezone for ActiveRecord to be consistent
     config.active_record.default_timezone = :local

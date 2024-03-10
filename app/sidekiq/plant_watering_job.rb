@@ -22,8 +22,8 @@ class PlantWateringJob
 
         if comparison_result
           # Send reminder email
-          # ReminderMailer.watering_reminder(user.email, plant.name).deliver_now
-          puts "Email sent for plant: #{plant.name} at #{current_time}"
+          ReminderMailer.watering_reminder(user.email, plant.name).deliver_now
+          puts "Email sent for plant: #{plant.name} at #{current_time}. Watering time #{watering_time}"
         else
           puts "Watering time #{watering_time} not within range for plant: #{plant.name} at #{current_time}"
         end
