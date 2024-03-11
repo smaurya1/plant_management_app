@@ -46,6 +46,14 @@ class PlantsController < ApplicationController
     else
       render :new
     end
+    
+    #Chat GPT
+    emailContent = ChatGPTService.email(@plant.user_id, @plant.name, @plant.personality)
+
+    if(emailContent?){
+      ReminderMailer.with(email: current_user.email, "Water reminder", emailContent ).watering_reminder.deliver_later;
+    }
+
   end
 
   def edit

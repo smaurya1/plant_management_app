@@ -7,12 +7,14 @@ class ReminderMailer < ApplicationMailer
     #     )
     # end
 
-    def watering_reminder(email, plant_name)
-      @plant_name = plant_name
+    def watering_reminder
+      @email = email
+      @subject = subject
+      @body = body
       mail(
-        to: email, 
-        subject: "Reminder: Water ",
-        body: "Time to water me"
+        to: @email, 
+        subject: @subject,
+        body: @body
       )
     end
 end

@@ -49,8 +49,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_042705) do
     t.string "root"
     t.string "spots"
     t.string "other"
-    t.date "currentDay"
-    t.string "doctor"
     t.string "image"
     t.index ["plant_id"], name: "index_health_checks_on_plant_id"
   end
@@ -83,7 +81,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_042705) do
     t.string "species", null: false
     t.time "wateringTime", null: false
     t.string "location", null: false
-    t.string "image"
     t.index ["personality_id"], name: "index_plants_on_personality_id"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end
@@ -109,7 +106,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_042705) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "time_zone"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
