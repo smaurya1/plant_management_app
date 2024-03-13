@@ -11,10 +11,21 @@
 
   <body>
     <div class="topnav">
-      <%= link_to 'Home', dashboard_path, class: 'nav-link' %>
       
+    <% unless request.path == '/dashboard' %>
+      <a href="#" onclick="event.preventDefault(); history.back();" class="nav-link">
+        <%= image_tag('arrowshape.backward.circle.svg', alt: 'Back') %>
+      </a>
+    <% else %>
+      <div class="spacer"></div> <!-- Placeholder spacer -->
+    <% end %>
+
+      <%= link_to dashboard_path, class: 'home' do %>
+        <%= image_tag('leaf.fill.svg', alt: 'Home') %>
+      <% end %>
+
       <div class="dropdown">
-        <button class="logout-link" onclick="toggleDropdown()">
+        <button class="dropdown">
           <%= image_tag('person.circle.svg') %>
         </button>
         <div id="dropdownMenu" class="dropdown-content">

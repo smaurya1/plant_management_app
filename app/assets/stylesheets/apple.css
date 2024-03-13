@@ -1,27 +1,27 @@
 /* nav bar */
-
 .topnav {
-  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
 }
 
-.topnav .nav-link {
-  float: left;
+.topnav .nav-link, .topnav.home, .dropdown {
   display: block;
   color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown{
-  float: right;
-  font-size: 12pt;
   text-align: center;
   text-decoration: none;
   border: none;
   outline: none;
   background-color: inherit;
-  cursor: pointer;
+}
+.nav-link, .spacer {
+  width: 50px;
+  display: inline-block;
+}
+
+.spacer {
+  visibility: hidden;
 }
 
 .logout-link {
@@ -70,7 +70,7 @@
 }
 
 
-
+/* General */
 .center-container {
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ h1 {
   font-weight: normal;
   text-align: center;
   color: #404040;
-  padding-top: 30px;
+  text-decoration: none;
 }
 
 h2 {
@@ -103,6 +103,17 @@ h2 {
   color: #404040;
 }
 
+.img{
+  border-radius: 8px;
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin: 0 auto 10px;
+  object-fit: contain;
+}
+
+
+/* form */
 .form {
   max-width: 400px;
   margin: 0 auto;
@@ -111,7 +122,7 @@ h2 {
 
 .first-field {
   background-color:white;
-  color: #404040;
+  color: #050404;
   font-size: 12pt;
   padding: 20px;
   width: 100%;
@@ -225,7 +236,9 @@ h2 {
   cursor: pointer;
 }
 
-.plant-cards {
+
+/* cards */
+.plant-cards, .health-check-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -241,16 +254,26 @@ h2 {
   text-decoration: none;
 }
 
-.img{
+.checkup-card {
+  border: 1px solid #ccc;
   border-radius: 8px;
-  height: 300px;
+  padding: 20px;
   width: 300px;
-  display: block;
-  margin: 0 auto 10px;
-  object-fit: contain;
+  height: 350px;
+  text-decoration: none;
 }
 
-.card.add-plant-card {
+.checkup-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.card.add-plant-card, .checkup-card.add-health-check-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,11 +283,13 @@ h2 {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.card.add-plant-card:hover {
+.checkup-card.add-plant-card:hover, .checkup-card.add-health-check-card:hover {
   background-color: #f0f0f0;
   color: #388E3C;
 }
 
+
+/* selection */
 select {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -340,4 +365,12 @@ p {
   display: flex;
   justify-content: center;
   gap: 50%;
+}
+
+.back-button {
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: inherit;
 }

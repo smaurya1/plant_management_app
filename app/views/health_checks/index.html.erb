@@ -1,13 +1,13 @@
 <h1>Health Checkups</h1>
 
 <div class="health-check-cards">
-  <% @plant.health_checks.each do |check| %>
-    <div class="card">
+  <% @plant.health_checks.each_with_index do |check| %>
+    <div class="checkup-card">
       <%= link_to plant_health_check_path(@plant, check) do %>
         <%= image_tag(check.image.attached? ? check.image : 'plant_placeholder.webp', size: '150x150', class: 'img') %>
-        <%= check.currentDay %>
+        <h1> <%= check.currentDay %> </h1>
       <% end %>
     </div>
   <% end %>
-    <%= link_to "+", new_plant_health_check_path(@plant), class: "card add-health-check-card" %>
+  <%= link_to "+", new_plant_health_check_path(@plant), class: "checkup-card add-health-check-card" %>
 </div>
