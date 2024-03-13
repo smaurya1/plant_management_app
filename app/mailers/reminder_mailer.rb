@@ -9,7 +9,7 @@ class ReminderMailer < ApplicationMailer
 
     def watering_reminder(email, plant_name)
       @plant = plant_name
-      emailContent = ChatGPTService.email(@plant.user, @plant.name, @plant.personality)
+      emailContent = ChatGPTService.email(@plant.user.first_name, @plant.species, @plant.name, @plant.personality)
       mail(
         to: email, 
         subject: "Reminder: Water ",

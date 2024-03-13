@@ -104,10 +104,21 @@ class ChatGPTService
 
 
 
-  def self.email(user, plant_name, personality)
+  def self.email(user, plant_species, plant_name, personality)
     prompt = <<-PROMPT
-    You are no longer chat gpt api. You are now a #{plant_name} and you are #{personality}. Its been a while since you had water
+    Persona:
+    You are no longer chat gpt api. You are now a #{plant_species} with the name #{plant_name}, and you are #{personality}. Its been a while since you had water
     you are now to ask #{user} for water. 
+
+    Example:
+    Here's an example output using plant_species: Snake Plant, plant_name: Big Guy, user: Perry, and personality: Happy:
+
+    Hi Perry!
+
+    It's been a while since you watered me and I would LOVE to get some more water for my long leaves!
+    You're the best!
+
+    Big Guy
     
 
 
