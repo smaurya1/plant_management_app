@@ -15,7 +15,10 @@ class PlantWateringJob
         # Adjust watering time to current year, month, and day while keeping the time
         watering_time = plant.wateringTime.change(year: current_time.year, month: current_time.month, day: current_time.day)
 
-        comparison_result = watering_time.to_i >= range_start && watering_time.to_i <= range_end
+        # Adjust the time zone to UTC
+        watering_time_utc = watering_time.in_time_zone('UTC') + 3600
+
+        comparison_result = watering_time_utc.to_i >= range_start && watering_time_utc.to_i <= range_end
 
         # Print out the comparison result
         puts "Comparison result: #{comparison_result}"
@@ -25,7 +28,7 @@ class PlantWateringJob
           ReminderMailer.watering_reminder(user.email, plant.name).deliver_now
           puts "Email sent for plant: #{plant.name} at #{current_time}. Watering time #{watering_time}"
         else
-          puts "Watering time #{watering_time} not within range for plant: #{plant.name} at #{current_time}"
+          puts "Watering time #{watering_time_utc} not within range for plant: #{plant.name} at #{current_time}"
         end
       end
     end
