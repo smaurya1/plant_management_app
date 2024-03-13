@@ -13,7 +13,7 @@
     <div class="topnav">
       
     <% parent_path = request.fullpath.split('/')[0...-1].join('/') %>
-    <% unless request.fullpath == '/dashboard' or request.fullpath =='/plants'%>
+    <% unless request.fullpath == '/dashboard' or request.fullpath =='/plants' || request.fullpath.match?(/\A\/users\/.+/)%>
       <%= link_to parent_path, class: 'nav-link' do %>
         <%= image_tag('arrowshape.backward.circle.svg', alt: 'Back') %>
       <% end %>
