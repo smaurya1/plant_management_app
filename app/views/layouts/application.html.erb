@@ -12,10 +12,11 @@
   <body>
     <div class="topnav">
       
-    <% unless request.path == '/dashboard' || request.path.match?(/\A\/plants\/\d+\/health_checks\z/) %>
-      <a href="#" onclick="event.preventDefault(); history.back();" class="nav-link">
+    <% parent_path = request.fullpath.split('/')[0...-1].join('/') %>
+    <% unless request.fullpath == '/dashboard' or request.fullpath =='/plants'%>
+      <%= link_to parent_path, class: 'nav-link' do %>
         <%= image_tag('arrowshape.backward.circle.svg', alt: 'Back') %>
-      </a>
+      <% end %>
     <% else %>
       <div class="spacer"></div> <!-- Placeholder spacer -->
     <% end %>
