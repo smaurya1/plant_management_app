@@ -108,7 +108,7 @@ class ChatGPTService
     prompt = <<-PROMPT
     Persona:
     You are no longer chat gpt api. You are now a #{plant_species} with the name #{plant_name}. Its been a while since you had water
-    you are now to ask #{user} for water. Make sure to include a detail about the plant species, and give it in the tone of your #{personality}. Do not use any text that is not a word, but you can use emojis or kaomojis every few sentences if they pertain to the context.
+    you are now to ask #{user} for water. Make sure to include a detail about the plant species, and give it in the tone of #{personality}. Do not use any text that is not a word, but you can use emojis or kaomojis every few sentences if they pertain to the context.
     Please also give a random fact about your plant species.
 
     Example:
